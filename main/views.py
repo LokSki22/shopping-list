@@ -11,7 +11,7 @@ def show_main(request):
 
     context = {
         'name': 'Muhammad Farrel Altaf', # Nama kamu
-        'class': 'PBP B', # Kelas PBP kamu
+        'class': 'PBP B ', # Kelas PBP kamu
         'products': products
     }
 
