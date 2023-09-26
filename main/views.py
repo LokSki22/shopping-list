@@ -14,6 +14,7 @@ from django.contrib.auth.decorators import login_required
 import datetime
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+
 # Create your views here.
 
 @login_required(login_url='/login')
@@ -38,7 +39,10 @@ def create_product(request):
      product.user = request.user
      product.save()
      return HttpResponseRedirect(reverse('main:show_main'))
- ...
+
+ context = {'form': form}
+ return render(request, "create_product.html", context)
+
 
 def show_xml(request):
     data = Product.objects.all()
