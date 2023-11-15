@@ -161,7 +161,7 @@
 
     refreshProducts()
 
-        function addProduct() {
+    function addProduct() {
         fetch("{% url 'main:add_product_ajax' %}", {
             method: "POST",
             body: new FormData(document.querySelector('#form'))
